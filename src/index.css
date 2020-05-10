@@ -190,14 +190,41 @@ button {
   text-align: center;
 }
 
-@media (min-width: 0) and (max-width: 549px) {
+@media (max-device-width: 480px) {
+  body {
+    font: 1em "Roboto", sans-serif;
+  }
+
   .movie-list li {
     margin: 3px;
     text-align: center;
+    width: 100%;
+  }
+
+  .main-title {
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .search-form {
+    width: auto;
+  }
+
+  .movie-poster {
+    width: 100%;
+  }
+
+  .tab,
+  .center,
+  .main-content,
+  .tablinks,
+  .add-to-content {
+    font-size: large;
   }
 }
 
-@media (min-width: 550px) {
+@media (min-device-width: 550px) {
   .movie-list li {
     margin: 3px;
     float: left;
@@ -210,7 +237,7 @@ button {
   }
 
   .poster-wrap {
-    height: 290px;
+    height: auto;
     border: 1px solid white;
     overflow: hidden;
     position: relative;
@@ -233,7 +260,7 @@ button {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-device-width: 769px) {
   body {
     padding-top: 115px;
   }
@@ -250,18 +277,18 @@ button {
 
   .movie-list li {
     margin: 3px;
-    width: 33.333333333%;
+    width: 32.5%;
   }
 }
 
-@media (min-width: 769px) and (max-width: 999px) {
+@media (min-device-width: 769px) and (max-width: 999px) {
   .movie-list li:nth-of-type(3n + 1) {
     margin: 3px;
     clear: left;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-device-width: 1000px) {
   .movie-list li {
     margin: 3px;
     width: 19%;
