@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "build": "webpack -w",
+    "start": "node server.js",
+    "build": "webpack",
+    "start:dev": "nodemon server.js",
+    "build:dev": "webpack -w",
     "test": "jest"
   },
   "keywords": [],
