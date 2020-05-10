@@ -4,7 +4,7 @@ const { join } = require("path");
 const app = express();
 app.use(express.static("dist"));
 
-//It is sending html from dist so that on reload page 
+//It is sending html from dist so that on reload page
 //Can be done using historyApiFallback = true also if using webpack devserver
 //But for server side rendering
 
@@ -16,4 +16,4 @@ app.get("*", function (req, res) {
   });
 });
 
-app.listen(4000, () => console.log("Listening"));
+app.listen(process.env.PORT || 4000, () => console.log("Listening"));
