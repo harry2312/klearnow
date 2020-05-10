@@ -21,6 +21,7 @@ export default function Home() {
     [];
 
   const message = (info && info.dataList && info.dataList.message) || "";
+  const loading = (info && info.dataList && info.dataList.loading) || "";
 
   const handleAddToContent = (item) => {
     addToMyContent(dipatch, item);
@@ -29,7 +30,9 @@ export default function Home() {
   const movies = arrList.filter((v) => v.Type === "movie");
   const series = arrList.filter((v) => v.Type === "series");
 
-  return (
+  return loading ? (
+    <h3 className="center">Loading...</h3>
+  ) : (
     <>
       {message && <Notify message={message} />}
       <Tab />
